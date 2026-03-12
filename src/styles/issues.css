@@ -1,0 +1,46 @@
+.issue-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.issue-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 14px;
+  border-left: 6px solid var(--blush);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.issue-actions {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 0.8rem;
+}
+
+.btn-resolve {
+  background: #4caf50;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-delete {
+  background: #e53935;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-resolve:hover {
+  background: #43a047;
+}
+
+.btn-delete:hover {
+  background: #d32f2f;
+}
+

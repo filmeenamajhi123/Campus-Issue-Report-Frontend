@@ -1,0 +1,43 @@
+@import "./variables.css";
+
+.navbar {
+  background: var(--violet);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.navbar a {
+  color: white;
+  margin-left: 1.5rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.logout {
+  background: var(--blush);
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+.nav-links a,
+.nav-links button {
+  color: white;
+  margin-left: 1rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links button {
+  background: var(--blush);
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
