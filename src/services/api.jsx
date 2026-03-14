@@ -19,7 +19,7 @@ export const getAllIssues = () => {
 };
 
 export const addIssue = (data) => {
-  const user = JSON.parse(localStorage.getItem("user"));
+const user = JSON.parse(localStorage.getItem("user") || "{}");
   return API.post("/api/issues", data, {
     headers: {
       Authorization: `Bearer ${user?.token}`, // ✅ FIX: token header added
