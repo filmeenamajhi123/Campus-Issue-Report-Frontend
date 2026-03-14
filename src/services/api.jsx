@@ -7,20 +7,20 @@ const API = axios.create({
 
 // ✅ FIX: named exports added
 export const loginUser = (data) => {
-  return API.post("/login", data);
+  return API.post("/api/login", data);
 };
 
 export const signupUser = (data) => {
-  return API.post("/signup", data);
+  return API.post("/api/signup", data);
 };
 
 export const getAllIssues = () => {
-  return API.get("/issues");
+  return API.get("/api/issues");
 };
 
 export const addIssue = (data) => {
   const user = JSON.parse(localStorage.getItem("user"));
-  return API.post("/issues", data, {
+  return API.post("/api/issues", data, {
     headers: {
       Authorization: `Bearer ${user?.token}`, // ✅ FIX: token header added
     },
@@ -29,7 +29,7 @@ export const addIssue = (data) => {
 
 export const resolveIssue = (id) => {
   const user = JSON.parse(localStorage.getItem("user"));
-  return API.patch(`/issues/${id}/resolve`, {}, {
+  return API.patch(`/api/issues/${id}/resolve`, {}, {
     headers: {
       Authorization: `Bearer ${user?.token}`,
     },
@@ -38,7 +38,7 @@ export const resolveIssue = (id) => {
 
 export const deleteIssue = (id) => {
   const user = JSON.parse(localStorage.getItem("user"));
-  return API.delete(`/issues/${id}`, {
+  return API.delete(`/api/issues/${id}`, {
     headers: {
       Authorization: `Bearer ${user?.token}`,
     },
